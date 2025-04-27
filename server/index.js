@@ -3,6 +3,7 @@ import cors from 'cors';
 import nodemon from 'nodemon';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import { postPlate, getPlate } from './controllers/Name.js';
 
 dotenv.config();
 const app = express();
@@ -27,6 +28,10 @@ app.get('/health',(req,res)=>{
         Message:"server is running"
     })
 })
+
+app.post('/name',postPlate)
+
+app.get('/name',getPlate)
 
 
 
