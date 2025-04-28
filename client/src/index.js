@@ -7,6 +7,7 @@ import Details from './views/Details/Details';
 import Name from './views/Name/Name';
 import Namedetail from './views/Namedetails/Namedetail';
 import Signup from './views/Signup';
+import Navbar from './views/Navbar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path:"/signup",
     element: <Signup/>
+  },
+  {
+    path:"/navbar",
+    element: <Navbar/>
   }
 ])
 root.render(<RouterProvider router={router} />);
