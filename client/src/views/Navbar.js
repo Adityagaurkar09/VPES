@@ -26,7 +26,7 @@ const Navbar = () => {
           </ul>
         </li>
         <li className="nav-item">
-          Dashboard
+       <Link to="/dashboard">Dashboard</Link>
         </li>
         <li className="nav-item">
           About Us

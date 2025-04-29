@@ -4,6 +4,7 @@ import nodemon from 'nodemon';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { postPlate, getPlate } from './controllers/Name.js';
+import { postSignup, getUsers } from './controllers/user.js';
 
 dotenv.config();
 const app = express();
@@ -28,10 +29,14 @@ app.get('/health',(req,res)=>{
         Message:"server is running"
     })
 })
+app.post('/signup',postSignup)
+
+app.get('/signup',getUsers)
 
 app.post('/name',postPlate)
 
 app.get('/name',getPlate)
+
 
 
 

@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import './index.css';
 import Home from './views/Home/Home';
-import Details from './views/Details/Details';
-import Name from './views/Name/Name';
-import Namedetail from './views/Namedetails/Namedetail';
+import Name from './Auto/Erection/Name/Name';
+import Namedetail from './Auto/Erection/Namedetails/Namedetail';
 import Signup from './views/Signup';
 import Navbar from './views/Navbar'
+import Dashboard from './views/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -15,10 +15,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-  {
-    path: "/Details",
-    element: <Details/>
-  },
+
   {
     path: "/name",
     element: <Name/>
@@ -34,6 +31,10 @@ const router = createBrowserRouter([
   {
     path:"/navbar",
     element: <Navbar/>
+  },
+  {
+    path:"dashboard",
+    element: <Dashboard/>
   }
 ])
 root.render(<RouterProvider router={router} />);

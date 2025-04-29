@@ -8,6 +8,10 @@ function Signup() {
         phone: '',
         password: ''
     })
+    SubmitEvent = (e) => {
+        e.preventDefault()
+        console.log(signupData)
+    }
   return (
     <div className='signup-container'>
       <h1>Signup</h1>
@@ -32,7 +36,7 @@ function Signup() {
             <input type='text' placeholder='Enter your password' className='signup-input' value={signupData.password}
             onChange={(e) => setSignupData({...signupData,password: e.target.value})}/>
         </div>
-        <button type='button' className='signup-button'>Signup</button>
+        <button type='button' className='signup-button' onClick={SubmitEvent}>Signup</button>
       </div>
     </div>
   )
